@@ -1,0 +1,97 @@
+import java.util.*;
+
+public class main {
+
+	public static void main(String[] args) {
+		// TestData:
+		// 1 10 16 35 30
+		// 3 9 15 47 49
+		// 1 9 18 33 40
+		// 2 4 6 8 85
+		// 3 9 15 47 49
+		// 1 10 16 35 30
+		// winning numbers1 9 15 33 40
+		// a counter to keep program in loop
+		int runProgram = 0;
+		// loop for main code block
+		while (runProgram < 1) {
+			// prompt for ticket numbers
+			System.out.println("Enter the numbers on your ticket:");
+
+			Scanner input = new Scanner(System.in);
+
+			// winning numbers1 9 15 33 40
+
+			int win1 = 1;
+			int win2 = 9;
+			int win3 = 15;
+			int win4 = 33;
+			int win5 = 40;
+			// sum is a counter
+			int sum = 0;
+			// status dependent to sum
+			int status = 0;
+
+			// User inputs numbers that will be used for booleans
+			int userNum1 = input.nextInt();
+			int userNum2 = input.nextInt();
+			int userNum3 = input.nextInt();
+			int userNum4 = input.nextInt();
+			int userNum5 = input.nextInt();
+			// increment sum counter when there is a match
+			if (win1 == userNum1) {
+				sum++;
+			}
+			if (win2 == userNum2) {
+				sum++;
+			}
+			if (win3 == userNum3) {
+				sum++;
+			}
+			if (win4 == userNum4) {
+				sum++;
+			}
+			if (win5 == userNum5) {
+				sum++;
+			}
+			// transfer value from counter to status in order to perform switch case
+			status = sum;
+			// print status to check value for logic errors
+			System.out.println("The number of matches is: " + status);
+
+			switch (status) {
+			case 0:
+				System.out.println("Sorry, you have no matches. No prize");
+				break;
+			case 1:
+				System.out.println("matches one number ticket wins $1");
+				break;
+			case 2:
+				System.out.println("2-3 matches the ticket wins $10");
+				break;
+			case 3:
+				System.out.println("2-3 matches the ticket wins $10");
+				break;
+			case 4:
+				System.out.println("2-3 matches the ticket wins $10");
+				break;
+			case 5:
+				System.out.println("You matched 5 numbers! You win $5000");
+				break;
+			default:
+				System.out.println("Error, for now....");
+				break;
+			}
+
+			System.out.println("Would you like to enter antoher Ticket?" + "Enter 1 to enter or 2 to end program:");
+			// Check for more tickets
+			int menuSelection = input.nextInt();
+
+			if (menuSelection == 1) {
+				runProgram = 0;
+			} else {
+				runProgram = 1;
+			}
+		}
+	}
+}
