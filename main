@@ -1,3 +1,7 @@
+//C36a
+//Lab 2 Lottery Ticket
+//Ricardo Martinez
+//Mondays Wednesdays 6-8
 import java.util.*;
 
 public class main {
@@ -38,7 +42,7 @@ public class main {
 			int userNum3 = input.nextInt();
 			int userNum4 = input.nextInt();
 			int userNum5 = input.nextInt();
-			//Adding a check to make sure the user enters an integer between 0 and 56
+			
 			if ((userNum1<1||userNum1>55)
 				||(userNum2<1||userNum2>55)
 				||(userNum3<1||userNum3>55)
@@ -46,7 +50,7 @@ public class main {
 				||(userNum5<1||userNum5>55)){
 				System.out.println("Please Enter 5 number from 1-55.");
 				continue;
-			}	
+			}
 			// increment sum counter when there is a match
 			if (win1 == userNum1) {
 				sum++;
